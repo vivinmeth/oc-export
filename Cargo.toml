@@ -3,6 +3,8 @@ name = "oc-export"
 version = "0.1.0"
 edition = "2021"
 description = "Export OpenCode conversation histories to readable Markdown"
+license = "0BSD"
+authors = ["VivinMeth <iam@vivinmeth.com>"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
