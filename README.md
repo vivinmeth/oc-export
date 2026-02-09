@@ -172,7 +172,6 @@ src/
 | `serde` + `serde_json` | 1.x | JSON deserialization with derive macros |
 | `chrono` | 0.4 | Timestamp formatting (epoch ms -> human dates) |
 | `clap` | 4.x | CLI argument parsing with derive macros |
-| `walkdir` | 2.x | Directory traversal (declared but not currently used directly; `fs::read_dir` suffices) |
 | `indicatif` | 0.17 | Progress bar during export |
 | `anyhow` | 1.x | Error handling with context |
 

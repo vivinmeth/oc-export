@@ -1,8 +1,8 @@
 use serde::Deserialize;
-use std::collections::HashMap;
 
 // ── Timestamps ──────────────────────────────────────────────────────
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone, Default)]
 pub struct ProjectTime {
     pub created: Option<u64>,
@@ -10,18 +10,21 @@ pub struct ProjectTime {
     pub initialized: Option<u64>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone, Default)]
 pub struct SessionTime {
     pub created: Option<u64>,
     pub updated: Option<u64>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone, Default)]
 pub struct MessageTime {
     pub created: Option<u64>,
     pub completed: Option<u64>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone, Default)]
 pub struct PartTime {
     pub start: Option<u64>,
@@ -31,6 +34,7 @@ pub struct PartTime {
 
 // ── Project ─────────────────────────────────────────────────────────
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct Project {
     pub id: String,
@@ -64,6 +68,7 @@ pub struct SessionSummary {
     pub files: Option<u64>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct Session {
     pub id: String,
@@ -110,6 +115,7 @@ impl Session {
 
 // ── Message ─────────────────────────────────────────────────────────
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone, Default)]
 pub struct MessageModel {
     #[serde(rename = "providerID")]
@@ -133,12 +139,14 @@ pub struct Tokens {
     pub cache: TokenCache,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone, Default)]
 pub struct MessagePath {
     pub cwd: Option<String>,
     pub root: Option<String>,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct Message {
     pub id: String,
@@ -178,6 +186,7 @@ impl Message {
 // ── Part ────────────────────────────────────────────────────────────
 
 /// Represents the `state` object on tool-type parts.
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct ToolState {
     pub status: Option<String>,
@@ -190,6 +199,7 @@ pub struct ToolState {
 }
 
 /// A part is the atomic content unit. Tagged on `type`.
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 #[serde(tag = "type")]
 pub enum PartKind {
@@ -230,6 +240,7 @@ pub enum PartKind {
 }
 
 /// Wrapper that carries the common fields plus the type-specific kind.
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct Part {
     pub id: String,
@@ -243,6 +254,7 @@ pub struct Part {
 
 // ── Session Diff ────────────────────────────────────────────────────
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct DiffEntry {
     pub file: String,
@@ -255,6 +267,7 @@ pub struct DiffEntry {
 
 // ── Todo ────────────────────────────────────────────────────────────
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize, Clone)]
 pub struct TodoEntry {
     pub id: String,

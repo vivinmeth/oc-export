@@ -1,1 +1,8 @@
 /target
+opencode-export/
+.surkyl
+.nanx
+.vscode
+.clinerules*
+.claude
+.memory-bank/

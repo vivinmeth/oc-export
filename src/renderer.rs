@@ -184,12 +184,7 @@ fn render_part(md: &mut String, part: &Part, prefix: &str) {
         PartKind::StepStart { .. } => {
             // Visual step separator (subtle)
         }
-        PartKind::StepFinish {
-            tokens,
-            cost,
-            reason,
-            ..
-        } => {
+        PartKind::StepFinish { tokens, reason, .. } => {
             // Optionally show step token counts as a small annotation
             if let Some(t) = tokens {
                 let out = t.output.unwrap_or(0);
